@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BLAME! - Enter The City</title>
+    <link rel="stylesheet" href="styles.css">
+   
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-black text-white">
+
+<!-- navbar -->
+<nav class="fixed top-0 w-full bg-cyan-950/50 backdrop-blur-sm z-50">
+
+
+  <div class="container mx-auto px-6 py-4">
+    <div class="flex items-center justify-between">
+      <h1 class="flex items-center">
+        <img src="Layer 1.png" alt="BLAME! Logo" class="h-8 w-auto" />
+      </h1>
+      <ul class="flex gap-6">
+          <li><a href="#hero">Home</a></li>
+                    <li><a href="#about">Story</a></li>
+                    <li><a href="#world">World</a></li>
+                    <li><a href="#characters">Characters</a></li>
+                    <li><a href="#features">Gameplay</a></li>
+                    <li><a href="#arsenal">Arsenal</a></li>
+                    <li><a href="#kk">kk</a></li>
+                    
+      </ul>
+    </div>
+  </div>
+</nav>
+
+   <!-- game vid and title -->
+    <section id="hero" class="h-screen flex items-center justify-center">
+       
+       <video autoplay muted loop playsinline class="absolute top-0 left-0 w-full h-full object-cover z-0">
+    <source src="Sequence 01_1.mp4" type="video/mp4" />
+    Your browser does not support the video tag.
+  </video>
+   <div class="absolute inset-0 bg-black/40 z-0"></div>
+    <div class="text-center z-10">
+            <h1 class="flex items-center"><img src="Layer 1.png" alt="" class=" h-40 w-auto"></h1><br>
+            <p class="text-xl text-gray-400 mb-8">Enter The City</p>
+            <!-- From Uiverse.io by SmookyDev --> 
+<!-- From Uiverse.io by SmookyDev — Modified to Cyan Theme -->
+<button
+  class="relative w-[11em] h-[4em] font-bold text-[13px] text-[#ddebf0] bg-transparent border-none outline-none transition-all duration-100"
+>
+  E X P L O R E
+  <div
+    id="clip"
+    class="absolute top-0 w-full h-full overflow-hidden border-[5px] border-double border-[#b1c5c7] shadow-[inset_0_0_15px_#195480]"
+  >
+    <div id="leftTop" class="corner absolute w-[4em] h-[4em] bg-[#b1c5c7] shadow-[inset_1px_1px_8px_#2781c3] rotate-45 transition-transform duration-200 -top-[1.96em] -left-[3em]"></div>
+    <div id="rightTop" class="corner absolute w-[4em] h-[4em] bg-[#b1c5c7] shadow-[inset_1px_1px_8px_#2781c3] rotate-45 transition-transform duration-200 -top-[1.98em] left-[91%]"></div>
+    <div id="leftBottom" class="corner absolute w-[4em] h-[4em] bg-[#b1c5c7] shadow-[inset_1px_1px_8px_#2781c3] rotate-45 transition-transform duration-200 top-[2.1em] -left-[2.15em]"></div>
+    <div id="rightBottom" class="corner absolute w-[4em] h-[4em] bg-[#b1c5c7] shadow-[inset_1px_1px_8px_#2781c3] rotate-45 transition-transform duration-200 top-[45%] left-[88%]"></div>
+  </div>
+
+  <span
+    id="rightArrow"
+    class="arrow absolute bg-[#b1c5c7] top-[35%] left-[102%] w-[11%] h-[30%]"
+  ></span>
+  <span
+    id="leftArrow"
+    class="arrow absolute bg-[#b1c5c7] top-[35%] -left-[13.5%] w-[11%] h-[30%]"
+  ></span>
+</button>
+
+<style>
+#clip {
+  -webkit-clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%);
+}
+
+#leftArrow {
+  -webkit-clip-path: polygon(100% 0, 100% 100%, 0 50%);
+}
+#rightArrow {
+  -webkit-clip-path: polygon(100% 49%, 0 0, 0 100%);
+}
+
+button:hover #rightArrow {
+  background-color: #1febec;
+  left: -15%;
+  animation: rightArrow8 0.6s ease-in-out infinite alternate both;
+}
+button:hover #leftArrow {
+  background-color: #1febec;
+  left: 103%;
+  animation: leftArrow8 0.6s ease-in-out infinite alternate both;
+}
+button:hover .corner {
+  transform: scale(1.25) rotate(45deg);
+}
+button:hover #clip {
+  animation: greenLight8 0.2s ease-in-out 0.55s both;
+  border-color: #1febec;
+  box-shadow: inset 0 0 32px #1febec;
+}
+
+/* Animations */
+@keyframes leftArrow8 {
+  from { transform: translate(0px); }
+  to { transform: translateX(10px); }
+}
+@keyframes rightArrow8 {
+  from { transform: translate(0px); }
+  to { transform: translateX(-10px); }
+}
+@keyframes greenLight8 {
+  to { box-shadow: inset 0 0 32px #27c39f; }
+}
+</style>
+
+
+
+
+        </div>
+    </section>
+
+
+    <section id="about" class="min-h-screen py-20">
+        <div class="container mx-auto px-6">
+            <h2 class="text-5xl font-bold mb-8">THE STORY</h2>
+            <div class="grid md:grid-cols-2 gap-12">
+                <div>
+                    <p class="text-gray-400 mb-4">Story text goes here...</p>
+                </div>
+                <div>
+                    <div class="bg-gray-900 h-96 flex items-center justify-center">
+                        [Image placeholder]
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- world sec -->
+    <section id="world" class="min-h-screen py-20">
+        <div class="container mx-auto px-6">
+            <h2 class="text-5xl font-bold mb-8 text-center">THE CITY</h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-gray-900 p-6">
+                    <h3 class="text-2xl font-bold mb-2">Feature 1</h3>
+                    <p class="text-gray-400">Description...</p>
+                </div>
+                <div class="bg-gray-900 p-6">
+                    <h3 class="text-2xl font-bold mb-2">Feature 2</h3>
+                    <p class="text-gray-400">Description...</p>
+                </div>
+                <div class="bg-gray-900 p-6">
+                    <h3 class="text-2xl font-bold mb-2">Feature 3</h3>
+                    <p class="text-gray-400">Description...</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- character-->
+    <section id="characters" class="min-h-screen py-20">
+        <div class="container mx-auto px-6">
+            <h2 class="text-5xl font-bold mb-8 text-center">CHARACTERS</h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-gray-900">
+                    <div class="h-64 bg-gray-800 flex items-center justify-center">
+                        [Character Image]
+                    </div>
+                    <div class="p-4">
+                        <h3 class="text-xl font-bold">Killy</h3>
+                        <p class="text-gray-400">Description...</p>
+                    </div>
+                </div>
+                <div class="bg-gray-900">
+                    <div class="h-64 bg-gray-800 flex items-center justify-center">
+                        [Character Image]
+                    </div>
+                    <div class="p-4">
+                        <h3 class="text-xl font-bold">Safeguards</h3>
+                        <p class="text-gray-400">Description...</p>
+                    </div>
+                </div>
+                <div class="bg-gray-900">
+                    <div class="h-64 bg-gray-800 flex items-center justify-center">
+                        [Character Image]
+                    </div>
+                    <div class="p-4">
+                        <h3 class="text-xl font-bold">Silicon Life</h3>
+                        <p class="text-gray-400">Description...</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- gameplay -->
+    <section id="features" class="min-h-screen py-20">
+        <div class="container mx-auto px-6">
+            <h2 class="text-5xl font-bold mb-8 text-center">GAMEPLAY</h2>
+            <div class="grid md:grid-cols-4 gap-6">
+                <div class="bg-gray-900 p-6 text-center">
+                    <h3 class="text-xl font-bold mb-2">Exploration</h3>
+                    <p class="text-gray-400">Description...</p>
+                </div>
+                <div class="bg-gray-900 p-6 text-center">
+                    <h3 class="text-xl font-bold mb-2">Combat</h3>
+                    <p class="text-gray-400">Description...</p>
+                </div>
+                <div class="bg-gray-900 p-6 text-center">
+                    <h3 class="text-xl font-bold mb-2">Puzzles</h3>
+                    <p class="text-gray-400">Description...</p>
+                </div>
+                <div class="bg-gray-900 p-6 text-center">
+                    <h3 class="text-xl font-bold mb-2">Survival</h3>
+                    <p class="text-gray-400">Description...</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- arsenal -->
+    <section id="arsenal" class="min-h-screen py-20">
+        <div class="container mx-auto px-6">
+            <h2 class="text-5xl font-bold mb-8 text-center">ARSENAL</h2>
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div class="bg-gray-900 h-96 flex items-center justify-center">
+                    [Weapon Image]
+                </div>
+                <div>
+                    <h3 class="text-3xl font-bold mb-4">Graviton Beam Emitter</h3>
+                    <p class="text-gray-400 mb-4">Description...</p>
+                </div>
+            </div>
+        </div>
+    </section>
+   
+
+    <!-- foot -->
+    <footer class="py-20 text-center">
+        <h2 class="text-4xl font-bold mb-4">COMING SOON</h2>
+        <input type="email" placeholder="Enter your email" class="bg-gray-900 px-6 py-3 text-white mb-4">
+        <button class="bg-green-600 px-8 py-3 font-bold">NOTIFY ME</button>
+    </footer>
+    
+
+</body>
+</html>
