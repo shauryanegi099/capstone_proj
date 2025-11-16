@@ -7,35 +7,62 @@
     <link rel="stylesheet" href="styles.css">
    
     <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      *{
+        font-family: orbitron;
+      }
+
+      @keyframes gradientShift {
+        0% {
+          background-position: 0% 50%;
+        }
+        50% {
+          background-position: 100% 50%;
+        }
+        100% {
+          background-position: 0% 50%;
+        }
+      }
+
+      .gradient-text {
+        background: linear-gradient(135deg, #06b6d4, #0ea5e9, #06b6d4, #0ea5e9);
+        background-size: 300% 300%;
+        animation: gradientShift 4s ease infinite;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+      }
+
+      .gradient-text-fast {
+        background: linear-gradient(135deg, #06b6d4, #1febec, #06b6d4, #1febec);
+        background-size: 300% 300%;
+        animation: gradientShift 3s ease infinite;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+      }
+    </style>
 </head>
 <body class="bg-black text-white">
 
-<!-- navbar -->
-<nav class="fixed top-0 w-full bg-cyan-950/50 backdrop-blur-sm z-50">
-
-
+<nav class="fixed top-0 w-full bg-cyan-950/30 backdrop-blur-md z-50">
   <div class="container mx-auto px-6 py-4">
     <div class="flex items-center justify-between">
       <h1 class="flex items-center">
         <img src="Layer 1.png" alt="BLAME! Logo" class="h-8 w-auto" />
       </h1>
       <ul class="flex gap-6">
-          <li><a href="#hero">Home</a></li>
-                    <li><a href="#about">Story</a></li>
-                    <li><a href="#world">World</a></li>
-                    <li><a href="#characters">Characters</a></li>
-                    <li><a href="#features">Gameplay</a></li>
-                    <li><a href="#arsenal">Arsenal</a></li>
-                    <li><a href="#kk">kk</a></li>
-                    
+        <li><a href="#about" class="nav-link text-white hover:text-cyan-400 hover:scale-110 transition-all duration-200">Story</a></li>
+        <li><a href="#world" class="nav-link text-white hover:text-cyan-400 hover:scale-110 transition-all duration-200">World</a></li>
+        <li><a href="#races" class="nav-link text-white hover:text-cyan-400 hover:scale-110 transition-all duration-200">Races</a></li>
+        <li><a href="#features" class="nav-link text-white hover:text-cyan-400 hover:scale-110 transition-all duration-200">Gameplay</a></li>
+        <li><a href="#arsenal" class="nav-link text-white hover:text-cyan-400 hover:scale-110 transition-all duration-200">Arsenal</a></li>
       </ul>
     </div>
   </div>
 </nav>
 
-   <!-- game vid and title -->
     <section id="hero" class="h-screen flex items-center justify-center">
-       
        <video autoplay muted loop playsinline class="absolute top-0 left-0 w-full h-full object-cover z-0">
     <source src="Sequence 01_1.mp4" type="video/mp4" />
     Your browser does not support the video tag.
@@ -44,8 +71,6 @@
     <div class="text-center z-10">
             <h1 class="flex items-center"><img src="Layer 1.png" alt="" class=" h-40 w-auto"></h1><br>
             <p class="text-xl text-gray-400 mb-8">Enter The City</p>
-            <!-- From Uiverse.io by SmookyDev --> 
-<!-- From Uiverse.io by SmookyDev — Modified to Cyan Theme -->
 <button
   class="relative w-[11em] h-[4em] font-bold text-[13px] text-[#ddebf0] bg-transparent border-none outline-none transition-all duration-100"
 >
@@ -101,7 +126,6 @@ button:hover #clip {
   box-shadow: inset 0 0 32px #1febec;
 }
 
-/* Animations */
 @keyframes leftArrow8 {
   from { transform: translate(0px); }
   to { transform: translateX(10px); }
@@ -115,135 +139,229 @@ button:hover #clip {
 }
 </style>
 
-
-
-
         </div>
     </section>
 
 
     <section id="about" class="min-h-screen py-20">
         <div class="container mx-auto px-6">
-            <h2 class="text-5xl font-bold mb-8">THE STORY</h2>
+            <h2 class="text-5xl font-bold mb-8 gradient-text-fast">THE STORY</h2>
             <div class="grid md:grid-cols-2 gap-12">
                 <div>
-                    <p class="text-gray-400 mb-4">Story text goes here...</p>
+                    <p class="text-gray-400 mb-4">BLAME! is a dark, atmospheric sci-fi manga known for its quiet intensity and stunning, almost haunting artwork. The story follows Killy, a mysterious, almost solitary wanderer searching for humans who still possess something called the Net Terminal Gene. He travels through an enormous, endless megastructure—a world that feels cold, mechanical, and overwhelmingly vast.
+
+There's very little dialogue… and that's part of its mood. It makes you feel the silence, the loneliness, the sense of wandering through ruins that once had meaning.
+
+As Killy moves forward, he encounters beings that are dangerous, broken, or lost in their own ways. The world itself feels like a character—towering, empty, and yet strangely beautiful.</p>
                 </div>
                 <div>
                     <div class="bg-gray-900 h-96 flex items-center justify-center">
-                        [Image placeholder]
+                        <img src="blame-21.png" alt="">
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- world sec -->
-    <section id="world" class="min-h-screen py-20">
+   
+   <section id="world" class="min-h-screen py-20">
+    <div class="container mx-auto px-6">
+        <h2 class="text-5xl font-bold mb-8 text-center gradient-text-fast">THE CITY</h2>
+        <div class="grid md:grid-cols-3 gap-8">
+            <div class="bg-gray-900 p-6 flex flex-col h-[800px]">
+                <h3 class="text-2xl font-bold mb-2 gradient-text">The Megastructure Walls</h3>
+                <p class="text-gray-400 mb-4">Endless vertical layers stretching beyond sight. Ancient steel, cracked cables, and forgotten pathways stacked like memories. The walls feel alive—growing, shifting, expanding with a quiet hunger.</p>
+                <img src="xblame33.webp" alt="" class="w-full h-full object-cover">
+            </div>
+            <div class="bg-gray-900 p-6 flex flex-col h-[800px]">
+                <h3 class="text-2xl font-bold mb-2 gradient-text">The Abandoned Data Sectors</h3>
+                <p class="text-gray-400 mb-4">Dark corridors where the old network once pulsed. Now only fragments remain… broken screens flickering with ghostly symbols, echoes of a system that lost its purpose long ago.</p>
+                <img src="fe76d7959d9448187ec96161e5f65476.jpg" alt="" class="w-full h-full object-cover">
+            </div>
+            <div class="bg-gray-900 p-6 flex flex-col h-[800px]">
+                <h3 class="text-2xl font-bold mb-2 gradient-text">The Patrol Drones</h3>
+                <p class="text-gray-400 mb-4">Silent guardians drifting through the empty halls, scanning for intruders without mercy. Their movements are smooth and unsettling—like shadows that learned how to breathe.</p>
+                <img src="a9b35a4bd2013e29f132e5fe13d869ad.jpg" alt="" class="w-full h-full object-cover">
+            </div>
+        </div>
+    </div>
+</section>
+
+    
+    <section id="races" class="min-h-screen py-20">
         <div class="container mx-auto px-6">
-            <h2 class="text-5xl font-bold mb-8 text-center">THE CITY</h2>
-            <div class="grid md:grid-cols-3 gap-8">
-                <div class="bg-gray-900 p-6">
-                    <h3 class="text-2xl font-bold mb-2">Feature 1</h3>
-                    <p class="text-gray-400">Description...</p>
-                </div>
-                <div class="bg-gray-900 p-6">
-                    <h3 class="text-2xl font-bold mb-2">Feature 2</h3>
-                    <p class="text-gray-400">Description...</p>
-                </div>
-                <div class="bg-gray-900 p-6">
-                    <h3 class="text-2xl font-bold mb-2">Feature 3</h3>
-                    <p class="text-gray-400">Description...</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- character-->
-    <section id="characters" class="min-h-screen py-20">
-        <div class="container mx-auto px-6">
-            <h2 class="text-5xl font-bold mb-8 text-center">CHARACTERS</h2>
+            <h2 class="text-5xl font-bold mb-8 text-center gradient-text-fast">RACES</h2>
             <div class="grid md:grid-cols-3 gap-8">
                 <div class="bg-gray-900">
-                    <div class="h-64 bg-gray-800 flex items-center justify-center">
-                        [Character Image]
+                    <div class="h-64 bg-gray-800 flex items-center justify-center overflow-hidden ">
+                        <img src="Killy1.webp" alt="" class="w-full h-full object-cover">
                     </div>
                     <div class="p-4">
-                        <h3 class="text-xl font-bold">Killy</h3>
-                        <p class="text-gray-400">Description...</p>
+                        <h3 class="text-xl font-bold gradient-text">HUMANS</h3>
+                        <p class="text-gray-400">Fragile, scattered, and nearly extinct. Most survivors wander the endless layers of the Megastructure without memory of the old world. Their bodies are human, but their origins are blurred—descendants of countless generations lost inside a city that grows faster than they can understand.</p>
                     </div>
                 </div>
                 <div class="bg-gray-900">
                     <div class="h-64 bg-gray-800 flex items-center justify-center">
-                        [Character Image]
+                        <img src="Blame-manga-safeguards-1.jpg" alt="" class="w-full h-full object-cover">
                     </div>
                     <div class="p-4">
-                        <h3 class="text-xl font-bold">Safeguards</h3>
-                        <p class="text-gray-400">Description...</p>
+                        <h3 class="text-xl font-bold gradient-text">Safeguards</h3>
+                        <p class="text-gray-400">Cold, precise, and relentless. Created long ago to protect the Network, they now act with broken logic—hunting intruders, humans, and anything that does not belong. Their faces are expressionless, their movements eerily silent, like machines that learned how to stalk.</p>
                     </div>
                 </div>
                 <div class="bg-gray-900">
                     <div class="h-64 bg-gray-800 flex items-center justify-center">
-                        [Character Image]
+                           <img src="BlameLog1-2.webp" alt="" class="w-full h-full object-cover">
                     </div>
+                    
                     <div class="p-4">
-                        <h3 class="text-xl font-bold">Silicon Life</h3>
-                        <p class="text-gray-400">Description...</p>
+                   
+                        <h3 class="text-xl font-bold gradient-text">Silicon Life</h3>
+                        <p class="text-gray-400">Artificial beings forged from rogue technology, shaped by evolution and conflict. They adapt, rebuild, and grow stronger after every battle. Some are monstrous, some intelligent, all driven by a will that rejects the old system. Their presence is a whisper of rebellion in the steel corridors.</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- gameplay -->
+   
     <section id="features" class="min-h-screen py-20">
         <div class="container mx-auto px-6">
-            <h2 class="text-5xl font-bold mb-8 text-center">GAMEPLAY</h2>
+            <h2 class="text-5xl font-bold mb-8 text-center gradient-text-fast">GAMEPLAY</h2>
             <div class="grid md:grid-cols-4 gap-6">
                 <div class="bg-gray-900 p-6 text-center">
-                    <h3 class="text-xl font-bold mb-2">Exploration</h3>
-                    <p class="text-gray-400">Description...</p>
+                    <h3 class="text-xl font-bold mb-2 gradient-text">Exploration</h3>
+                    <p class="text-gray-400">In the quiet depths of the Megastructure, every corridor feels endless and untouched. Players wander through forgotten towers, collapsed data rooms, and haunting steel caverns… never knowing what waits around the next corner. The world doesn't guide you—you uncover it slowly, like peeling back the layers of a dream.</p>
                 </div>
                 <div class="bg-gray-900 p-6 text-center">
-                    <h3 class="text-xl font-bold mb-2">Combat</h3>
-                    <p class="text-gray-400">Description...</p>
+                    <h3 class="text-xl font-bold mb-2 gradient-text">Combat</h3>
+                    <p class="text-gray-400">Fights are sharp, sudden, and unforgiving. You face rogue machines, corrupted guardians, and creatures born from abandoned technology. Every encounter feels like a test of instinct—fast decisions, precise timing, and the constant awareness that one mistake can end everything</p>
                 </div>
                 <div class="bg-gray-900 p-6 text-center">
-                    <h3 class="text-xl font-bold mb-2">Puzzles</h3>
-                    <p class="text-gray-400">Description...</p>
+                    <h3 class="text-xl font-bold mb-2 gradient-text">Puzzles</h3>
+                    <p class="text-gray-400">The city holds secrets in its architecture. Doors sealed for centuries, encrypted terminals, shifting platforms, and pathways that rearrange themselves. Each puzzle feels like interacting with an ancient mind, trying to understand what the world wants from you.</p>
                 </div>
                 <div class="bg-gray-900 p-6 text-center">
-                    <h3 class="text-xl font-bold mb-2">Survival</h3>
-                    <p class="text-gray-400">Description...</p>
+                    <h3 class="text-xl font-bold mb-2 gradient-text">Survival</h3>
+                    <p class="text-gray-400">Resources are scarce, allies even rarer. You must manage energy, ammunition, and your own path through hostile zones. Survival isn't just about fighting—it's about staying quiet, learning patterns, avoiding danger, and listening to the echoes of a city that no longer remembers humans.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- arsenal -->
+   
     <section id="arsenal" class="min-h-screen py-20">
         <div class="container mx-auto px-6">
-            <h2 class="text-5xl font-bold mb-8 text-center">ARSENAL</h2>
+            <h2 class="text-5xl font-bold mb-8 text-center gradient-text-fast">ARSENAL</h2>
             <div class="grid md:grid-cols-2 gap-12 items-center">
-                <div class="bg-gray-900 h-96 flex items-center justify-center">
-                    [Weapon Image]
+                <div class=" h-100 flex items-center ">
+                    <img src="Layer91.png" alt="" class="h-full w-full object-cover">
                 </div>
                 <div>
-                    <h3 class="text-3xl font-bold mb-4">Graviton Beam Emitter</h3>
-                    <p class="text-gray-400 mb-4">Description...</p>
+                    <h3 class="text-3xl font-bold mb-4 gradient-text-fast">Graviton Beam Emitter</h3>
+                    <p class="text-gray-400 mb-4">A devastating high-density energy weapon capable of piercing through layers of the Megastructure with a single blast. Its shots bend gravity itself, folding space for a heartbeat before releasing a beam that tears straight through anything caught in its path. Rare, unstable, and feared by every machine that roams the steel corridors, it is a tool meant only for those who understand the weight of destruction it carries.
+
+Using it feels like holding a controlled storm—quiet, intense, and overwhelmingly powerful.</p>
                 </div>
             </div>
         </div>
     </section>
    
 
-    <!-- foot -->
-    <footer class="py-20 text-center">
-        <h2 class="text-4xl font-bold mb-4">COMING SOON</h2>
-        <input type="email" placeholder="Enter your email" class="bg-gray-900 px-6 py-3 text-white mb-4">
-        <button class="bg-green-600 px-8 py-3 font-bold">NOTIFY ME</button>
-    </footer>
     
+    <footer class="bg-gray-950 py-16 border-t border-cyan-900/30">
+    <div class="container mx-auto px-6">
+        <div class="flex justify-center gap-8 mb-12">
+            <a href="#" class="group relative w-10 h-10 flex items-center justify-center">
+                <div class="absolute inset-0 bg-cyan-500/20 rounded-full group-hover:bg-cyan-400/40 transition-all duration-300"></div>
+                <svg class="w-5 h-5 text-cyan-400 group-hover:text-cyan-300 transition-colors" fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+            </a>
+            <a href="#" class="group relative w-10 h-10 flex items-center justify-center">
+                <div class="absolute inset-0 bg-cyan-500/20 rounded-full group-hover:bg-cyan-400/40 transition-all duration-300"></div>
+                <svg class="w-5 h-5 text-cyan-400 group-hover:text-cyan-300 transition-colors" fill="currentColor" viewBox="0 0 24 24"><path d="M23.953 4.57a10 10 0 002.856-3.51 10.02 10.02 0 01-2.856.975c-1.009-.605-2.109-.986-3.206-.986-2.42 0-4.389 1.987-4.389 4.43 0 .348.036.685.106 1.01-3.646-.195-6.876-1.946-9.03-4.62-.383.665-.6 1.435-.6 2.257 0 1.54.784 2.897 1.972 3.684-.73-.023-1.418-.223-2.02-.558v.056c0 2.15 1.528 3.948 3.553 4.358-.373.102-.765.156-1.17.156-.285 0-.564-.027-.837-.08.564 1.78 2.207 3.074 4.15 3.11-1.518 1.19-3.427 1.899-5.507 1.899-.358 0-.71-.022-1.057-.065 1.97 1.262 4.323 2 6.846 2 8.216 0 12.7-6.824 12.7-12.738 0-.194-.004-.388-.012-.583.873-.631 1.632-1.423 2.23-2.326z"/></svg>
+            </a>
+            <a href="#" class="group relative w-10 h-10 flex items-center justify-center">
+                <div class="absolute inset-0 bg-cyan-500/20 rounded-full group-hover:bg-cyan-400/40 transition-all duration-300"></div>
+                <svg class="w-5 h-5 text-cyan-400 group-hover:text-cyan-300 transition-colors" fill="currentColor" viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+            </a>
+            <a href="#" class="group relative w-10 h-10 flex items-center justify-center">
+                <div class="absolute inset-0 bg-cyan-500/20 rounded-full group-hover:bg-cyan-400/40 transition-all duration-300"></div>
+                <svg class="w-5 h-5 text-cyan-400 group-hover:text-cyan-300 transition-colors" fill="currentColor" viewBox="0 0 24 24"><rect width="24" height="24" fill="none"/><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zM5.838 12a6.162 6.162 0 1 1 12.324 0 6.162 6.162 0 0 1-12.324 0zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm4.965-10.322a1.44 1.44 0 1 1 2.881.001 1.44 1.44 0 0 1-2.881-.001Z" fill="currentColor"/></svg>
+            </a>
+            <a href="#" class="group relative w-10 h-10 flex items-center justify-center">
+                <div class="absolute inset-0 bg-cyan-500/20 rounded-full group-hover:bg-cyan-400/40 transition-all duration-300"></div>
+                <svg class="w-5 h-5 text-cyan-400 group-hover:text-cyan-300 transition-colors" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0C5.373 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.6.11.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v 3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/></svg>
+            </a>
+        </div>
+
+        <div class="max-w-md mx-auto mb-12 text-center">
+            <h3 class="text-xl font-bold mb-4">STAY UPDATED</h3>
+            <div class="flex gap-2">
+                <input type="email" placeholder="Enter your email" class="flex-1 bg-gray-900 border border-cyan-900/50 px-4 py-3 text-white placeholder-gray-500 focus:border-cyan-400 focus:outline-none transition-colors">
+                <button class="bg-cyan-600 hover:bg-cyan-500 text-black font-bold px-6 py-3 transition-colors">NOTIFY</button>
+            </div>
+        </div>
+
+        <div class="flex flex-wrap justify-center gap-6 mb-8 text-sm text-gray-400">
+            <a href="pirvacy.html" class="hover:text-cyan-400 transition-colors">Privacy Policy</a>
+            <span class="text-cyan-900">|</span>
+            <a href="termsnser.html" class="hover:text-cyan-400 transition-colors">Terms of Service</a>
+            <span class="text-cyan-900">|</span>
+            <a href="codeofc.html" class="hover:text-cyan-400 transition-colors">Code of Conduct</a>
+        </div>
+
+        <div class="text-center text-sm text-gray-500 pt-8 border-t border-gray-800">
+            <p>© 2025 BLAME! All Rights Reserved.</p>
+        </div>
+    </div>
+</footer>
+
+<script>
+  const sections = [
+    { id: 'hero', name: 'Story' },
+    { id: 'about', name: 'Story' },
+    { id: 'world', name: 'World' },
+    { id: 'races', name: 'Races' },
+    { id: 'features', name: 'Gameplay' },
+    { id: 'arsenal', name: 'Arsenal' }
+  ];
+
+  const navLinks = document.querySelectorAll('.nav-link');
+
+  function updateNavLinks() {
+    const scrollPosition = window.scrollY + 200;
+
+    navLinks.forEach(link => {
+      link.style.transform = 'scale(1)';
+      link.style.opacity = '0.7';
+      link.style.color = '#ffffff';
+    });
+
+    sections.forEach((section, index) => {
+      const element = document.getElementById(section.id);
+      if (element) {
+        const elementPosition = element.offsetTop;
+        const elementHeight = element.offsetHeight;
+
+        if (scrollPosition >= elementPosition && scrollPosition < elementPosition + elementHeight) {
+          const correspondingLink = Array.from(navLinks).find(link => 
+            link.textContent.trim() === section.name
+          );
+          
+          if (correspondingLink) {
+            correspondingLink.style.transform = 'scale(1.25)';
+            correspondingLink.style.opacity = '1';
+            correspondingLink.style.color = '#06b6d4';
+          }
+        }
+      }
+    });
+  }
+
+  window.addEventListener('scroll', updateNavLinks);
+  updateNavLinks();
+</script>
 
 </body>
 </html>
